@@ -5,14 +5,14 @@ use std::io::{BufRead, BufReader};
 
 use sha1::Digest;
 
-const SHA1_HEX_STRING_LENGTH: usize =40;
+const SHA1_HEX_STRING_LENGTH: usize = 40;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<String> = env::args().collect();
 
     if args.len() != 3 {
-        println!("Usage: ");
-        println!("SHA1_cracker: <list.txt> <sha1_hash>");
+        println!("Usage:");
+        println!("sha_on_crack: <list.txt> <sha1_hash>");
         return Ok(());
     }
 
